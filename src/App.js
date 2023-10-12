@@ -17,8 +17,7 @@ const socket = io.connect(`${env.API_URL}`);
 function App() {
   const navigate = useNavigate();
   const [user, setUser, loading] = useFindUser();
-
-  useEffect(() => {
+ useEffect(() => {
     if (user) {
       navigate("/joinchat");
     } else {
